@@ -1,14 +1,14 @@
 {
-  "name": "Taobao",
+  "name": "user-data-capture",
   "version": "1.0.0",
-  "description": "A proxy service to capture B's IP info and send it via email to A.",
+  "description": "Capture user data and send via email",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "querystring": "^0.2.0"
   }
 }
